@@ -7,6 +7,6 @@ For example: print-diamond ‘C’ prints
 
 &nbsp; &nbsp;  A  
 &nbsp; B &nbsp; B   
-C &nbsp; &nbsp;  C  
+C &nbsp; &nbsp; &nbsp; C  
 &nbsp; B &nbsp; B   
 &nbsp; &nbsp;  A 
