@@ -1,0 +1,21 @@
+package com.github.aprilrathe.diamond;
+
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Diamond
+{
+    private static final char startLetter = 'A';
+
+    public static List<String> format(char endLetter) {
+        List<String> diamondFormat = new ArrayList<String>();
+
+        if(endLetter == startLetter) {
+            diamondFormat.add(String.valueOf(startLetter));
+            diamondFormat.add(String.valueOf(endLetter));
+        }
+
+        return diamondFormat;
+    }
+}
