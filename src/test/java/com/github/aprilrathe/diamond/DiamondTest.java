@@ -18,4 +18,14 @@ public class DiamondTest {
         List<String> actual = Diamond.format('A');
         Assert.assertEquals(expected, actual);
     }
+
+    @Test
+    public void format_inputB_threeRowsOneSpaceBeforeANoSpaceBeforeB() {
+        List<String> expected = new ArrayList<String>();
+        expected.add(" A ");
+        expected.add("B");
+        expected.add(" A ");
+        List<String> actual = Diamond.format('B');
+        Assert.assertEquals(expected, actual);
+    }
 }

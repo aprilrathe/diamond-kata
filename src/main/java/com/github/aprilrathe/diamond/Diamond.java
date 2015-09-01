@@ -1,6 +1,5 @@
 package com.github.aprilrathe.diamond;
 
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,7 +14,11 @@ public class Diamond
             diamondFormat.add(String.valueOf(startLetter));
             diamondFormat.add(String.valueOf(endLetter));
         }
-
+        else if (endLetter == 'B') {
+            diamondFormat.add(" "+String.valueOf(startLetter)+" ");
+            diamondFormat.add(String.valueOf(endLetter));
+            diamondFormat.add(" "+String.valueOf(startLetter)+" ");
+        }
         return diamondFormat;
     }
 }
