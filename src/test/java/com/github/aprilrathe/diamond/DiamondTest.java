@@ -28,6 +28,15 @@ public class DiamondTest {
         Assert.assertEquals(expected, actual);
     }
 
+    @Test
+    public void format_inputC_fourRowsTwoSpacesAOneSpaceBNoSpaceC() {
+        char[] letters = {'A','B','C','B','A'};
+        int[] spaces = {2,1,0,1,2};
+        List<String> expected = createExpectedDiamondFormat(letters, spaces);
+        List<String> actual = Diamond.format('C');
+        Assert.assertEquals(expected, actual);
+    }
+
     private List<String> createExpectedDiamondFormat(char[] letters, int[] spaces) {
         List<String> diamond = new ArrayList<String>();
         for(int i = 0; i<letters.length ; i++) {

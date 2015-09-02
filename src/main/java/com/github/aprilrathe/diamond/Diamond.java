@@ -19,6 +19,13 @@ public class Diamond
             diamondFormat.add(String.valueOf(endLetter));
             diamondFormat.add(" "+String.valueOf(startLetter));
         }
+        else if (endLetter == 'C') {
+            diamondFormat.add("  "+String.valueOf(startLetter));
+            diamondFormat.add(" " + String.valueOf((char)(startLetter + 1)));
+            diamondFormat.add(String.valueOf(endLetter));
+            diamondFormat.add(" " + String.valueOf((char)(startLetter + 1)));
+            diamondFormat.add("  "+String.valueOf(startLetter));
+        }
         return diamondFormat;
     }
 
