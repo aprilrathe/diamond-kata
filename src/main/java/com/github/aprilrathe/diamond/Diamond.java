@@ -15,10 +15,11 @@ public class Diamond
             diamondFormat.add(String.valueOf(endLetter));
         }
         else if (endLetter == 'B') {
-            diamondFormat.add(" "+String.valueOf(startLetter)+" ");
+            diamondFormat.add(" "+String.valueOf(startLetter));
             diamondFormat.add(String.valueOf(endLetter));
-            diamondFormat.add(" "+String.valueOf(startLetter)+" ");
+            diamondFormat.add(" "+String.valueOf(startLetter));
         }
         return diamondFormat;
     }
+
 }
