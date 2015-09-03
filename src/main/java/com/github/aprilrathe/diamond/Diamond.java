@@ -19,13 +19,6 @@ public class Diamond
         return diamondStructure;
     }
 
-    private static List<String> createBottomRows(List<String> firstHalf) {
-        List<String> mirror = new ArrayList<String>(firstHalf);
-        Collections.reverse(mirror);
-        mirror.remove(0);
-        return mirror;
-    }
-
     private static List<String> createTopRows(char endLetter) {
         List<String> rows = new ArrayList<String>();
         int numColumns = numberOfColumns(endLetter);
@@ -38,17 +31,25 @@ public class Diamond
         return rows;
     }
 
-    private static String createRow(char currentLetter, int rowNumber, int numColumns, int numberOfLetters) {
+    private static List<String> createBottomRows(List<String> firstHalf) {
+        List<String> mirror = new ArrayList<String>(firstHalf);
+        Collections.reverse(mirror);
+        // Remove duplicate middle row
+        mirror.remove(0);
+        return mirror;
+    }
+
+    private static String createRow(char currentLetter, int rowNumber, int numColumns, int numbLetters) {
         String row = StringUtils.EMPTY;
-        int firstIndex = numColumns - numberOfLetters - rowNumber;
-        int middleIndex = numberOfLetters - firstIndex - 1;
+        int firstIndex = numColumns - numbLetters - rowNumber;
+        int middleIndex = numbLetters - firstIndex - 1;
 
         row += createSpaceString(firstIndex);
         row += currentLetter;
         row += createSpaceString(middleIndex);
 
         String mirror = StringUtils.reverse(row);
-        mirror = StringUtils.right(mirror, numberOfLetters - 1);
+        mirror = StringUtils.right(mirror, numbLetters - 1);
         row += mirror;
 
         return row;
